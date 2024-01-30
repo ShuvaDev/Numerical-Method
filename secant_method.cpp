@@ -13,13 +13,6 @@ double f(double x, int term) {
     return result;
 }
 
-double fprime(double x, int term) {
-    double result = 0;
-    for(int i = term - 1; i > 0; i--) {
-        result += arr[i] * i * pow(x, i - 1);
-    }
-    return result;
-}
 
 double find_root(double x1, double x2, int term) {
     double x3 = (f(x2, term)*x1 - f(x1, term)*x2) / (f(x2, term) - f(x1, term));
